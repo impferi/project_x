@@ -1,74 +1,74 @@
 
-// // const person = {
-// //       name: 'romanSherman',
-// //       age: 34,
-// //       isMarried: false
-// // } ;
+// const person = {
+//       name: 'romanSherman',
+//       age: 34,
+//       isMarried: false
+// } ;
 
-// // let arr = ['roma', 'lazio', 'milan'] ;
+// let arr = ['roma', 'lazio', 'milan'] ;
 
-// // const obj = {
-// //     name: 'Alertio',
-// //     surname: 'Berritini',
-// //     age: 48
-// // } ;
+// const obj = {
+//     name: 'Alertio',
+//     surname: 'Berritini',
+//     age: 48
+// } ;
 
 
-// // let jerkOff = 'Valeron' ;
-// // console.log(typeof(parseInt(jerkOff))) ;
+// let jerkOff = 'Valeron' ;
+// console.log(typeof(parseInt(jerkOff))) ;
 
-// // let shipName = null ;
+// let shipName = null ;
 
-// // if(shipName) { 
-// //   console.log ('Верный результат')
-// // } else {
-// //   console.log('Очевидный результат')
-// // } ;
+// if(shipName) { 
+//   console.log ('Верный результат')
+// } else {
+//   console.log('Очевидный результат')
+// } ;
 
-// // let answer = prompt('Are you 18 age?', 'Укажите ваш возраст');
+// let answer = prompt('Are you 18 age?', 'Укажите ваш возраст');
 
-// // console.log(typeof(null)) ;
+// console.log(typeof(null)) ;
  
-// // let romanK = true,
-// //     laraR = true,
-// //     chemiZ = true,
-// //     molly = false;
+// let romanK = true,
+//     laraR = true,
+//     chemiZ = true,
+//     molly = false;
 
-// //     // console.log(romanK || laraR || chemiZ || molly) ;
+//     // console.log(romanK || laraR || chemiZ || molly) ;
 
-// // if(2*2 == 5) {
-// //   console.log('Thats right!')
-// // } else {
-// //   console.log('Wrong!')
-// // }
+// if(2*2 == 5) {
+//   console.log('Thats right!')
+// } else {
+//   console.log('Wrong!')
+// }
 
 
 
-// // if(num < 50) {
-// //   console.log('Неверно')
-// // } else if(num > 51) {
-// //   console.log('Много!')
-// // } else {
-// //   console.log('Верно')
-// // }
+// if(num < 50) {
+//   console.log('Неверно')
+// } else if(num > 51) {
+//   console.log('Много!')
+// } else {
+//   console.log('Верно')
+// }
 
-// // switch (num) {
-// //   case num < 49:
-// //      console.log('Нэверно');
-// //   break;
-// //   case num > 100:
-// //      console.log('Много!');
-// //   break;
-// //   case num > 80:
-// //      console.log('Много!');
-// //   break;
-// //   case num == 50:
-// //      console.log('Верно!');
-// //   break; 
-// //   default:
-// //     console.log('Выполняется в любом случае')
-// //   break;
-// //   }
+// switch (num) {
+//   case num < 49:
+//      console.log('Нэверно');
+//   break;
+//   case num > 100:
+//      console.log('Много!');
+//   break;
+//   case num > 80:
+//      console.log('Много!');
+//   break;
+//   case num == 50:
+//      console.log('Верно!');
+//   break; 
+//   default:
+//     console.log('Выполняется в любом случае')
+//   break;
+//   }
 
 
 // let num = 50;
@@ -90,7 +90,7 @@
 //   console.log(i)
 // }
 
-let money = prompt('Ваш бюджет на месяц?', ''),
+let money = +prompt('Ваш бюджет на месяц?', ''),
     time = prompt('Введите дату в формате YYYY-MM-DD', '');
 
 let appData = {
@@ -105,8 +105,26 @@ let appData = {
 for (let i = 0; i < 2; i++) {
     let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
         b = prompt('Во сколько это обойдется?', '');
-        
-    appData.expenses[a] = b;
+    
+    if ( (typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null
+       && a!= '' && b!= '' && a.length < 50) {
+       console.log('done');
+       appData.expenses[a] = b;
+  }  else {
+          // прописать условие
+  };
 }
 
-alert(appData.budget / 30 );
+appData.moneyPerDay = appData.budget / 30;
+
+alert('Ежедневный бюджет: ' + appData.moneyPerDay);
+
+if(appData.moneyPerDay < 100) {
+    console.log('Минимальный уровень дохода');
+}  else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
+    console.log('Средний уровень дохода');
+}  else if (appData.moneyPerDay > 2000) {
+    console.log('Высокий уровень дохода');
+}  else {
+    console.log('Произошла ошибка')
+}
