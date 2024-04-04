@@ -33,4 +33,4 @@ let romanK = true,
     chemiZ = true,
     molly = false;
 
-    console.log(romanK || laraR || chemiZ || molly) ;
+    // console.log(romanK || laraR || chemiZ || molly) ;
