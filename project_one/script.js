@@ -132,6 +132,7 @@ if (appData.moneyPerDay < 100) {
   console.log("Произошла ошибка");
 }
 
+console.log(appData);
 // !!!!!!!!! программа учета через alert конец
 
 // let userName = prompt('Who are you hommie?', '');
