@@ -1,4 +1,3 @@
-
 // const person = {
 //       name: 'romanSherman',
 //       age: 34,
@@ -13,13 +12,12 @@
 //     age: 48
 // } ;
 
-
 // let jerkOff = 'Valeron' ;
 // console.log(typeof(parseInt(jerkOff))) ;
 
 // let shipName = null ;
 
-// if(shipName) { 
+// if(shipName) {
 //   console.log ('Верный результат')
 // } else {
 //   console.log('Очевидный результат')
@@ -28,7 +26,7 @@
 // let answer = prompt('Are you 18 age?', 'Укажите ваш возраст');
 
 // console.log(typeof(null)) ;
- 
+
 // let romanK = true,
 //     laraR = true,
 //     chemiZ = true,
@@ -41,8 +39,6 @@
 // } else {
 //   console.log('Wrong!')
 // }
-
-
 
 // if(num < 50) {
 //   console.log('Неверно')
@@ -62,14 +58,13 @@
 //   case num > 80:
 //      console.log('Много!');
 //   break;
-//   case num == 50:
+//   case num 50:
 //      console.log('Верно!');
-//   break; 
+//   break;
 //   default:
 //     console.log('Выполняется в любом случае')
 //   break;
 //   }
-
 
 // let num = 50;
 // // while (num < 55) {
@@ -90,47 +85,52 @@
 //   console.log(i)
 // }
 
-
 // !!!!!!!!! программа учета через alert
 
-// let money = +prompt('Ваш бюджет на месяц?', ''),
-//     time = prompt('Введите дату в формате YYYY-MM-DD', '');
+let money = +prompt("Ваш бюджет на месяц?", ""),
+  time = prompt("Введите дату в формате YYYY-MM-DD", "");
 
-// let appData = {
-//   budget: money,
-//   expenses: {},
-//   optionalExpenses: {},
-//   income: [],
-//   timeData: time,
-//   savings: false
-// };
+let appData = {
+  budget: money,
+  expenses: {},
+  optionalExpenses: {},
+  income: [],
+  timeData: time,
+  savings: false,
+};
 
-// for (let i = 0; i < 2; i++) {
-//     let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
-//         b = prompt('Во сколько это обойдется?', '');
-    
-//     if ( (typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null
-//        && a!= '' && b!= '' && a.length < 50) {
-//        console.log('done');
-//        appData.expenses[a] = b;
-//   }  else {
-//           // прописать условие
-//   };
-// }
+for (let i = 0; i < 2; i++) {
+  let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
+    b = prompt("Во сколько это обойдется?", "");
 
-// appData.moneyPerDay = appData.budget / 30;
+  if (
+    typeof a === "string" &&
+    typeof a != null &&
+    typeof b != null &&
+    a != "" &&
+    b != "" &&
+    a.length < 50
+  ) {
+    console.log("done");
+    appData.expenses[a] = b;
+  } else {
+    // прописать условие
+  }
+}
 
-// alert('Ежедневный бюджет: ' + appData.moneyPerDay);
+appData.moneyPerDay = appData.budget / 30;
 
-// if(appData.moneyPerDay < 100) {
-//     console.log('Минимальный уровень дохода');
-// }  else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
-//     console.log('Средний уровень дохода');
-// }  else if (appData.moneyPerDay > 2000) {
-//     console.log('Высокий уровень дохода');
-// }  else {
-//     console.log('Произошла ошибка')
-// }
+alert("Ежедневный бюджет: " + appData.moneyPerDay);
+
+if (appData.moneyPerDay < 100) {
+  console.log("Минимальный уровень дохода");
+} else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
+  console.log("Средний уровень дохода");
+} else if (appData.moneyPerDay > 2000) {
+  console.log("Высокий уровень дохода");
+} else {
+  console.log("Произошла ошибка");
+}
 
 // !!!!!!!!! программа учета через alert конец
 
@@ -141,7 +141,7 @@
 //     let pass = prompt('Password?', '');
 
 //     if (pass === 'Main') {
-//         alert('Welcome home captain!');    
+//         alert('Welcome home captain!');
 //     }   else if (pass === '' || pass === null){
 //         alert('Canceled');
 //     }    else {
@@ -152,16 +152,14 @@
 //       alert('Canceled');
 //     } else {
 //       alert('I dont know you');
-//     }   
-
+//     }
 
 // let num = 20;
 // function showFirstMessage(text) {
 //     alert(text);
-//     let num = 10; 
+//     let num = 10;
 //     console.log(num);
 // }
-
 
 // showFirstMessage('Default text');
 // console.log(num);
@@ -173,7 +171,7 @@
 
 // console.log(calc(2,8)) ;
 
-// let calc = (a,b) => a+b 
+// let calc = (a,b) => a+b
 
 // console.log(calc(3,8));
 
@@ -194,7 +192,6 @@
 //     console.log(error.message);
 // }
 
-
 // console.log('Continue...')
 
 // let myArray = [1, 2, 3];
@@ -205,7 +202,7 @@
 // const leagueChampions = {
 //     Inter: 'Milan',
 //     Juvenstus: 'Torino',
-//     Real: 'Madrid', 
+//     Real: 'Madrid',
 //     Barsa: 'Barcelona'
 // }
 
@@ -226,12 +223,12 @@
 
 // const userInfo = ({ name, commentsQty }) => {
 //     if (!commentsQty) {
-//         return `User ${name} has no comments`    
+//         return `User ${name} has no comments`
 // }
 //         return `User ${name} has ${commentsQty} comments`
-// } 
+// }
 
-// console.log(userInfo(userProfile)) ; 
+// console.log(userInfo(userProfile)) ;
 
 // const person = {
 //     age: 20,
@@ -261,7 +258,7 @@
 //       break
 //     default:
 //         console.log('Try again bro')
-// }   
+// }
 
 // let weather = 29
 // console.log(
@@ -270,11 +267,9 @@
 //     : -weather
 // );
 
-
 // for (let fi = 0; fi < 10; fi++) {
 //     console.log(fi)
 // }
-
 
 // const atpRating = {
 //     top1: 'Djokovic',
@@ -292,29 +287,31 @@
 //     console.log(znachenie)
 // });
 
+// class Comment {
+//   constructor(sho) {
+//     this.text = sho;
+//     this.votesQty = 0;
+//   }
 
-class Comment {
-    constructor(sho) {
-        this.text = sho
-        this.votesQty = 0
-    }
+//   upvote() {
+//     this.votesQty += 1;
+//   }
 
-    upvote() {
-        this.votesQty += 1
-    }
+//   static mergeComments(first, second) {
+//     return `${first} ${second}`;
+//   }
+// }
 
-    static mergeComments(first, second) {
-        return `${first} ${second}`
-    }
-}
+// const firstComment = new Comment("First Comment");
+// console.log(firstComment);
 
-const firstComment = new Comment ('First Comment')
-console.log(firstComment)
+// for (let index = 0; index < 5; index++) {
+//   firstComment.upvote();
+// }
 
-for (let index = 0; index < 5 ; index++) {
-    firstComment.upvote();
-}
+// console.log(firstComment.votesQty);
+// console.log(firstComment.text);
 
+// let change = 50;
 
- console.log(firstComment.votesQty)
- console.log(firstComment.text)
+// change == 50 ? console.log("da") : console.log("net");
